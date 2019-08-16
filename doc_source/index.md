@@ -1,7 +1,7 @@
 # Amazon WorkDocs Developer Guide
 
 -----
-*****Copyright &copy; 2018 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; 2019 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -25,7 +25,7 @@ Amazon's trademarks and trade dress may not be used in
    + [Adding Permissions to User on a Resource](adding-permissions.md)
 + [Authentication and Access Control for Administrative Applications](creating-wd-iam.md)
    + [Grant Permission to the Amazon WorkDocs API for a Developer on the AWS Account](wd-iam-sameacct.md)
-   + [Grant Permission to Amazon WorkDocs API for Third Party Developer AWS Account](wd-iam-crossacct.md)
+   + [Grant Permission to Amazon WorkDocs API for Third-Party Developer AWS Account](wd-iam-crossacct.md)
    + [Grant Permission to a Developer to Assume an IAM Role Given by a Amazon WorkDocs Customer](wd-iam-grantdev.md)
    + [Restricting Access to a Specific Amazon WorkDocs Instance](restrict_access.md)
    + [Managing Notifications for an IAM User or a Role](manage-notifications.md)

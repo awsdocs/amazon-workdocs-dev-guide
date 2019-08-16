@@ -21,6 +21,6 @@ You can obtain a Amazon WorkDocs Organization ID from the AWS console using the 
 
 **Obtaining an Organization Id**
 
-1. In the [AWS Directory Service console](https://console.aws.amazon.com/directoryservice/) navigation pane, select **Directories**\.
+1. In the [AWS Directory Service console](https://console.aws.amazon.com/directoryservicev2/) navigation pane, select **Directories**\.
 
 1. The **Directory ID** corresponding to your Amazon WorkDocs site is the Organization ID for that site\.

@@ -2,7 +2,7 @@
 
 The following code snippets can help you get started using the Amazon WorkDocs SDK\.
 
-
+**Topics**
 + [Connect to Amazon WorkDocs Using IAM User Credentials and Query for Users](connect-workdocs-iam.md)
 + [Connect to Amazon WorkDocs by Assuming a Role and Browse a User’s Root Folder](connect-workdocs-role.md)
 + [Upload a Document](upload-documents.md)

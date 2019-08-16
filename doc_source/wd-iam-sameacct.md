@@ -1,6 +1,6 @@
 # Grant Permission to the Amazon WorkDocs API for a Developer on the AWS Account<a name="wd-iam-sameacct"></a>
 
-As an IAM administrator if you want to grant Amazon WorkDocs API access to an IAM user from the same AWS account, you will need to create a Amazon WorkDocs API permission policy and attach it to the IAM user\. The following is a sample Amazon WorkDocs API policy that grants permission to read\-only APIs \(List and Describe APIs\)\.
+If you are an IAM administrator, you can grant Amazon WorkDocs API access to an IAM user from the same AWS account\. To do this, create a Amazon WorkDocs API permission policy and attach it to the IAM user\. The following is a sample Amazon WorkDocs API policy that grants permission to read\-only APIs \(List and Describe APIs\)\.
 
 ```
 {

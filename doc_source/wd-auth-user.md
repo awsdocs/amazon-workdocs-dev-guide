@@ -4,7 +4,7 @@ Amazon WorkDocs user level applications are registered and managed through the A
 
 Currently, applications can only access Amazon WorkDocs sites within the same AWS account where they are registered\.
 
-
+**Topics**
 + [Create an Application](#wd-app-create-app)
 + [Application Scopes](#wd-app-scopes)
 + [Authorization](#wd-authorization)
@@ -12,7 +12,7 @@ Currently, applications can only access Amazon WorkDocs sites within the same AW
 
 ## Create an Application<a name="wd-app-create-app"></a>
 
-As a Amazon WorkDocs administrator, create your application using the following steps\.
+As an Amazon WorkDocs administrator, create your application using the following steps\.
 
 1. Open the Amazon WorkDocs console at [https://console\.aws\.amazon\.com/zocalo/](https://console.aws.amazon.com/zocalo/)\.
 
@@ -35,41 +35,25 @@ The scope, either read or write, that you wish your application to have\. For mo
 ## Application Scopes<a name="wd-app-scopes"></a>
 
 Amazon WorkDocs supports the following application scopes:
-
-+ Content Write \(`workdocs.content.read`\) which gives your application access to the following Amazon WorkDocs APIs:
-
++ Content Read \(`workdocs.content.read`\), which gives your application access to the following Amazon WorkDocs APIs:
   + Get\*
-
   + Describe\*
-
 + Content Write \(`workdocs.content.write`\), which gives your application access to the following Amazon WorkDocs APIs:
-
   + Create\*
-
   + Update\*
-
   + Delete\*
-
   + Initiate\*
-
   + Abort\*
-
   + Add\*
-
   + Remove\*
 
 ## Authorization<a name="wd-authorization"></a>
 
-Once application registration is complete, an application can request authorization on behalf of any Amazon WorkDocs user\. To do this, the application should visit the Amazon WorkDocs OAuth endpoint, `https://auth.amazonworkdocs.com/oauth`, and provide the following query parameters:
-
+After application registration is complete, an application can request authorization on behalf of any Amazon WorkDocs user\. To do this, the application should visit the Amazon WorkDocs OAuth endpoint, `https://auth.amazonworkdocs.com/oauth`, and provide the following query parameters:
 + \[Required\] `app_id`—Application ID generated when an application is registered\.
-
 + \[Required\] `auth_type`—The OAuth type for the request\. Supported value is `ImplicitGrant`\.
-
 + \[Required\] `redirect_uri`—The redirect URI registered for an application to receive an access token\.
-
 + \[Optional\] `scopes`—A comma\-deliminated list of scopes\. If not specified, the list of scopes selected during registration will be used\.
-
 + \[Optional\] `state`—A string which is returned along with an access token\.
 
 A sample GET request to initiate the OAuth flow to obtain an access token:
@@ -80,13 +64,13 @@ GET https://auth.amazonworkdocs.com/oauth?app_id=my-app-id&auth_type=ImplicitGra
 
 The following takes place during the OAuth authorization flow:
 
-1. The application user will be prompted to enter the Amazon WorkDocs site name that they wish to connect to\.
+1. The application user is prompted to enter the Amazon WorkDocs site name\.
 
-1. Next, the user will be redirected to the Amazon WorkDocs authentication page where they should enter their credentials\.
+1. The user is redirected to the Amazon WorkDocs authentication page to enter their credentials\.
 
-1. After successful authentication, the user will be presented with the consent screen that allows the user to either grant or deny your application the authorization to access Amazon WorkDocs\.
+1. After successful authentication, the user is presented with the consent screen that allows the user to either grant or deny your application the authorization to access Amazon WorkDocs\.
 
-1. After the user clicks `Accept` on the consent screen, their browser will be redirected to your application's callback URL along with the access token and region information as query parameters\.
+1. After the user chooses `Accept` on the consent screen, their browser is redirected to your application's callback URL along with the access token and region information as query parameters\.
 
 A sample GET request from Amazon WorkDocs:
 

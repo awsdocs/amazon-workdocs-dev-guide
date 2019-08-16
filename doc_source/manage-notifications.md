@@ -1,8 +1,9 @@
 # Managing Notifications for an IAM User or a Role<a name="manage-notifications"></a>
 
-IAM Administrators can enable or disable notifications in Amazon WorkDocs through the IAM Console\. Note that even if there is an explicit allow policy attached to a user or role granting access to Notification APIs, for example by adding `workdocs:CreateNotificationSubscription` in the allowed action, Administrators still have to explicitly enable Notifications for this specific User or Role ARN through the IAM console\.
+IAM administrators can enable or disable notifications in Amazon WorkDocs through the IAM console\.
 
-Unless Notifications are explicitly enabled for a user or a role ARN through the IAM console, the applications using the user or role credentials would not be able to make calls to `CreateNotificationSubscription` to subscribe and receive notifications\.
+**Note**  
+Even if there is an explicit allow policy attached to a user or role that grants access to Notification APIs, administrators must use the IAM console to enable notifications for the specified user or role ARN\. Unless notifications are explicitly enabled for the user or role ARN, the applications using the user or role credentials are not able to make calls to `CreateNotificationSubscription` to subscribe and receive notifications\.
 
 **To enable notifications**
 

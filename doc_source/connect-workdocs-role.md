@@ -1,6 +1,6 @@
 # Connect to Amazon WorkDocs by Assuming a Role and Browse a User’s Root Folder<a name="connect-workdocs-role"></a>
 
-This simple sample code, using the AWS Java SDK, illustrates the individual steps for assuming a role and using the role's temporary security credentials to access Amazon WorkDocs\. The code sample uses `describeFolderContents` API to list of items present in a user's folder\.
+This sample code, using the AWS Java SDK, illustrates the individual steps for assuming a role and using the role's temporary security credentials to access Amazon WorkDocs\. The code sample uses the `describeFolderContents` API to create a list of items present in a user's folder\.
 
 ```
 import java.util.ArrayList;
