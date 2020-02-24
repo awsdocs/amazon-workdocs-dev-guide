@@ -26,7 +26,7 @@ Use the following procedure to upload a document to Amazon WorkDocs\.
    InitiateDocumentVersionUploadRequest request = new InitiateDocumentVersionUploadRequest();
    request.setParentFolderId("parent-folder-id");
    request.setName("my-document-name");
-   request.setContentType("application/octet-stream")
+   request.setContentType("application/octet-stream");
    InitiateDocumentVersionUploadResult result = amazonWorkDocsClient.initiateDocumentVersionUpload(request);
    UploadMetadata uploadMetadata = result.getUploadMetadata();
    String documentId = result.getMetadata().getId();
