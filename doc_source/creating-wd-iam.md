@@ -1,12 +1,12 @@
-# Authentication and Access Control for Administrative Applications<a name="creating-wd-iam"></a>
+# Authentication and access control for administrative applications<a name="creating-wd-iam"></a>
 
 Amazon WorkDocs administrative APIs are authenticated and authorized through IAM policies\. IAM administrators can create an IAM policy and attach it to an IAM role or user that can be used by the developer to access the API\.
 
 The following are provided as examples:
 
 **Topics**
-+ [Grant Permission to the Amazon WorkDocs API for a Developer on the AWS Account](wd-iam-sameacct.md)
-+ [Grant Permission to Amazon WorkDocs API for Third\-Party Developer AWS Account](wd-iam-crossacct.md)
-+ [Grant Permission to a Developer to Assume an IAM Role Given by a Amazon WorkDocs Customer](wd-iam-grantdev.md)
-+ [Restricting Access to a Specific Amazon WorkDocs Instance](restrict_access.md)
-+ [Managing Notifications for an IAM User or a Role](manage-notifications.md)
++ [Grant permission to the Amazon WorkDocs API for a developer on the AWS account](wd-iam-sameacct.md)
++ [Grant permission to Amazon WorkDocs API for third\-party developer AWS account](wd-iam-crossacct.md)
++ [Grant permission to a developer to assume an IAM role given by a Amazon WorkDocs customer](wd-iam-grantdev.md)
++ [Restricting access to a specific Amazon WorkDocs instance](restrict_access.md)
++ [Managing notifications for an IAM user or a role](manage-notifications.md)

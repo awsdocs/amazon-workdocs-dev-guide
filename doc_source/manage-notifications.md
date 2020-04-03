@@ -1,4 +1,4 @@
-# Managing Notifications for an IAM User or a Role<a name="manage-notifications"></a>
+# Managing notifications for an IAM user or a role<a name="manage-notifications"></a>
 
 IAM administrators can enable or disable notifications in Amazon WorkDocs through the IAM console\.
 

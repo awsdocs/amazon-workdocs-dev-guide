@@ -1,4 +1,4 @@
-# Subscribe to Notifications<a name="subscribe-notifications"></a>
+# Subscribe to notifications<a name="subscribe-notifications"></a>
 
 You can subscribe to notifications that Amazon WorkDocs sends when specific actions occur\.
 
@@ -6,7 +6,7 @@ You can subscribe to notifications that Amazon WorkDocs sends when specific acti
 
 1. Prepare your endpoint to process Amazon SNS messages\. For more information, see [Make sure your endpoint is ready to process Amazon SNS messages](https://docs.aws.amazon.com/sns/latest/dg/SendMessageToHttp.html#SendMessageToHttp.prepare) in the *Amazon Simple Notification Service Developer Guide*\.
 
-1. Enable notifications for the IAM role that your application is using\. See [Managing Notifications for an IAM User or a Role](manage-notifications.md)\.
+1. Enable notifications for the IAM role that your application is using\. See [Managing notifications for an IAM user or a role](manage-notifications.md)\.
 
 1. Create the subscription request as follows:
 
@@ -37,9 +37,9 @@ The message includes the following information:
   + `share_document`
   + `upload_document_version`
 
-You can obtain a Amazon WorkDocs Organization ID from the AWS console using the following steps:
+You can get a Amazon WorkDocs organization ID from the AWS console using the following steps:
 
-**Obtaining an Organization Id**
+**To get an organization ID**
 
 1. In the [AWS Directory Service console](https://console.aws.amazon.com/directoryservicev2/) navigation pane, select **Directories**\.
 

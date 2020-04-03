@@ -1,4 +1,4 @@
-# Grant Permission to Amazon WorkDocs API for Third\-Party Developer AWS Account<a name="wd-iam-crossacct"></a>
+# Grant permission to Amazon WorkDocs API for third\-party developer AWS account<a name="wd-iam-crossacct"></a>
 
 You can grant access to third\-party developers, or to users who are using a different AWS account\. To do this, create an IAM role, and attach Amazon WorkDocs API allow policies\.
 
@@ -15,7 +15,7 @@ The developer will need to provide the following information so the account admi
 
 The following procedure describes steps involved in configuring IAM for cross\-account access\.
 
-**Configuring IAM for Cross\-Account Access**
+**To configure IAM for cross\-account access**
 
 1. Create a Amazon WorkDocs API permission policy, call it `WorkDocsAPIReadOnly` policy\.
 

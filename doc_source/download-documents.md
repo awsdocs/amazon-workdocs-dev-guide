@@ -1,4 +1,4 @@
-# Download a Document<a name="download-documents"></a>
+# Download a document<a name="download-documents"></a>
 
 To download a document from Amazon WorkDocs, get a URL for the download as follows, and then use the API actions provided by your development platform to download the file using the URL\.
 

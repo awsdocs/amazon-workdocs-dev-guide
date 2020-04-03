@@ -1,4 +1,4 @@
-# Creating a New User<a name="creating-newuser"></a>
+# Creating a new user<a name="creating-newuser"></a>
 
 The following code snippet demonstrates the request construction for creating a new user in Amazon WorkDocs\.
 
@@ -28,9 +28,9 @@ CreateUserRequest request = new CreateUserRequest();
     CreateUserResult result = workDocsClient.createUser(request);
 ```
 
-You can obtain a Amazon WorkDocs Organization ID from the AWS console using the following steps:
+You can get a Amazon WorkDocs organization ID from the AWS console using the following steps:
 
-**Obtaining an Organization Id**
+**To get an organization ID**
 
 1. In the [AWS Directory Service console](https://console.aws.amazon.com/directoryservicev2/) navigation pane, select **Directories**\.
 

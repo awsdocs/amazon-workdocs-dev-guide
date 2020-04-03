@@ -1,18 +1,20 @@
-# Authentication and Access Control for User Applications<a name="wd-auth-user"></a>
+# Authentication and access control for user applications<a name="wd-auth-user"></a>
 
 Amazon WorkDocs user level applications are registered and managed through the Amazon WorkDocs console\. Developers should register their applications on the `My Applications` page on the Amazon WorkDocs console which will provide unique IDs for each application\. During registration, developers should specify redirect URIs where they will receive access tokens as well as application scopes\.
 
 Currently, applications can only access Amazon WorkDocs sites within the same AWS account where they are registered\.
 
 **Topics**
-+ [Create an Application](#wd-app-create-app)
-+ [Application Scopes](#wd-app-scopes)
++ [Create an application](#wd-app-create-app)
++ [Application scopes](#wd-app-scopes)
 + [Authorization](#wd-authorization)
 + [Invoking Amazon WorkDocs APIs](#wd-auth-invoke)
 
-## Create an Application<a name="wd-app-create-app"></a>
+## Create an application<a name="wd-app-create-app"></a>
 
 As an Amazon WorkDocs administrator, create your application using the following steps\.
+
+**To create an application**
 
 1. Open the Amazon WorkDocs console at [https://console\.aws\.amazon\.com/zocalo/](https://console.aws.amazon.com/zocalo/)\.
 
@@ -28,11 +30,11 @@ Description for the application\.
 **Redirect URIs**  
 The location that you want Amazon WorkDocs to redirect traffic to\.  
 **Application Scopes**  
-The scope, either read or write, that you wish your application to have\. For more details, see [Application Scopes](#wd-app-scopes)\.
+The scope, either read or write, that you wish your application to have\. For more details, see [Application scopes](#wd-app-scopes)\.
 
 1. Choose **Create**\.
 
-## Application Scopes<a name="wd-app-scopes"></a>
+## Application scopes<a name="wd-app-scopes"></a>
 
 Amazon WorkDocs supports the following application scopes:
 + Content Read \(`workdocs.content.read`\), which gives your application access to the following Amazon WorkDocs APIs:

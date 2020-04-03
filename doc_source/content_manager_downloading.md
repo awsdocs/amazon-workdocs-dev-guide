@@ -1,4 +1,4 @@
-# Downloading a Document<a name="content_manager_downloading"></a>
+# Downloading a document<a name="content_manager_downloading"></a>
 
 Developers can use Amazon WorkDocs Content Manager to download a specific version or the latest version of a document from Amazon WorkDocs\. The following examples demonstrate how to download a specific version of a document using Java and C\#\.
 

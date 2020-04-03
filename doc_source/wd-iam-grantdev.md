@@ -1,4 +1,4 @@
-# Grant Permission to a Developer to Assume an IAM Role Given by a Amazon WorkDocs Customer<a name="wd-iam-grantdev"></a>
+# Grant permission to a developer to assume an IAM role given by a Amazon WorkDocs customer<a name="wd-iam-grantdev"></a>
 
 If you are a developer with an administrative AWS account, you can grant a user permission to switch to a role by creating a new policy and attaching it to the user\.
 

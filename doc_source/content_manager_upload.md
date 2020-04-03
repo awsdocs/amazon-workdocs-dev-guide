@@ -1,6 +1,6 @@
-# Uploading a Document<a name="content_manager_upload"></a>
+# Uploading a document<a name="content_manager_upload"></a>
 
-Amazon WorkDocs Content Manager provides an API for uploading content to a Amazon WorkDocs site\. The following examples demonstrate how to upload a document using Java and C\#\.
+Amazon WorkDocs Content Manager provides an API for uploading content to an Amazon WorkDocs site\. The following examples demonstrate how to upload a document using Java and C\#\.
 
 Java
 

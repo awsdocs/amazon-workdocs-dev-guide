@@ -1,4 +1,4 @@
-# Connect to Amazon WorkDocs Using IAM User Credentials and Query for Users<a name="connect-workdocs-iam"></a>
+# Connect to Amazon WorkDocs with IAM user credentials and query for users<a name="connect-workdocs-iam"></a>
 
 The following code, using the AWS SDK, illustrates the steps in making API calls using an IAM user’s API credentials\. In this case the API user and the Amazon WorkDocs site belong to the same AWS account\.
 
@@ -8,9 +8,9 @@ The code sample uses describeUsers API to search for users and obtain metadata f
 
 The code requires that you obtain an Amazon WorkDocs Organization ID\.
 
-You can obtain a Amazon WorkDocs Organization ID from the AWS console using the following steps:
+You can get a Amazon WorkDocs organization ID from the AWS console using the following steps:
 
-**Obtaining an Organization Id**
+**To get an organization ID**
 
 1. In the [AWS Directory Service console](https://console.aws.amazon.com/directoryservicev2/) navigation pane, select **Directories**\.
 
