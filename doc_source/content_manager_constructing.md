@@ -4,7 +4,7 @@ Amazon WorkDocs Content Manager can be used for both administrative and user app
 
 For user applications, a developer must construct Amazon WorkDocs Content Manager with anonymous AWS credentials and an authentication token\.
 
-For administrative applications, the Amazon WorkDocs client must be initialized with AWS Identity and Access Management \(IAM\) credentials\. In addition, the authentication token most be omitted in subsequent API calls\.
+For administrative applications, the Amazon WorkDocs client must be initialized with AWS Identity and Access Management \(IAM\) credentials\. In addition, the authentication token must be omitted in subsequent API calls\.
 
 The following code demonstrates how to initialize Amazon WorkDocs Content Manager for user applications using Java or C\#\.
 
