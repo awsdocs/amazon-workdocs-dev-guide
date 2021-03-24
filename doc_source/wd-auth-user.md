@@ -58,6 +58,9 @@ After application registration is complete, an application can request authoriza
 + \[Optional\] `scopes`—A comma\-deliminated list of scopes\. If not specified, the list of scopes selected during registration will be used\.
 + \[Optional\] `state`—A string which is returned along with an access token\.
 
+**Note**  
+If you require FIPS 140\-2 validated cryptographic modules when accessing AWS through a command line interface or an API, use a FIPS endpoint\. For more information about the available FIPS endpoints, see [Federal Information Processing Standard \(FIPS\) 140\-2](http://aws.amazon.com/compliance/fips/)\.
+
 A sample GET request to initiate the OAuth flow to obtain an access token:
 
 ```
@@ -81,6 +84,8 @@ GET https://myapp.com/callback?acessToken=accesstoken&region=us-east-1&state=xyz
 ```
 
 In addition to the access token, the Amazon WorkDocs OAuth service also returns `region` as a query parameter for the selected Amazon WorkDocs site\. External applications should use the `region` parameter to determine the Amazon WorkDocs service endpoint\.
+
+If you require FIPS 140\-2 validated cryptographic modules when accessing AWS through a command line interface or an API, use a FIPS endpoint\. For more information about the available FIPS endpoints, see [Federal Information Processing Standard \(FIPS\) 140\-2](http://aws.amazon.com/compliance/fips/)\.
 
 ## Invoking Amazon WorkDocs APIs<a name="wd-auth-invoke"></a>
 

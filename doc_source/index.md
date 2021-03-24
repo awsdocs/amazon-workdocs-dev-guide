@@ -1,7 +1,7 @@
 # Amazon WorkDocs Developer Guide
 
 -----
-*****Copyright &copy; 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy;  Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -34,4 +34,4 @@ Amazon's trademarks and trade dress may not be used in
    + [Constructing Amazon WorkDocs Content Manager](content_manager_constructing.md)
    + [Downloading a document](content_manager_downloading.md)
    + [Uploading a document](content_manager_upload.md)
-+ [AWS Glossary](glossary.md)
++ [AWS glossary](glossary.md)

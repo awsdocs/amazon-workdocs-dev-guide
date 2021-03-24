@@ -5,6 +5,8 @@ You can subscribe to notifications that Amazon WorkDocs sends when specific acti
 **To subscribe to WorkDocs notifications**
 
 1. Prepare your endpoint to process Amazon SNS messages\. For more information, see [Make sure your endpoint is ready to process Amazon SNS messages](https://docs.aws.amazon.com/sns/latest/dg/SendMessageToHttp.html#SendMessageToHttp.prepare) in the *Amazon Simple Notification Service Developer Guide*\.
+**Note**  
+If you require FIPS 140\-2 validated cryptographic modules when accessing AWS through a command line interface or an API, use a FIPS endpoint\. For more information about the available FIPS endpoints, see [Federal Information Processing Standard \(FIPS\) 140\-2](http://aws.amazon.com/compliance/fips/)\.
 
 1. Enable notifications for the IAM role that your application is using\. See [Managing notifications for an IAM user or a role](manage-notifications.md)\.
 
