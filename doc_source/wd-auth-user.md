@@ -5,10 +5,96 @@ Amazon WorkDocs user level applications are registered and managed through the A
 Currently, applications can only access Amazon WorkDocs sites within the same AWS account where they are registered\.
 
 **Topics**
++ [Granting permissions to call the Amazon WorkDocs APIs](#api-auth)
++ [Using folder IDs in API calls](#use-folder-ids)
 + [Create an application](#wd-app-create-app)
 + [Application scopes](#wd-app-scopes)
 + [Authorization](#wd-authorization)
 + [Invoking Amazon WorkDocs APIs](#wd-auth-invoke)
+
+## Granting permissions to call the Amazon WorkDocs APIs<a name="api-auth"></a>
+
+Command line interface users must have full permissions to Amazon WorkDocs and AWS Directory Service\. Without the permissions, any API calls return **UnauthorizedResourceAccessException** messages\. The following policy grants full permissions\.
+
+```
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": [
+          "workdocs:*",
+          "ds:*",
+          "ec2:CreateVpc",
+          "ec2:CreateSubnet",
+          "ec2:CreateNetworkInterface",
+          "ec2:CreateTags",
+          "ec2:CreateSecurityGroup",
+          "ec2:DescribeVpcs",
+          "ec2:DescribeSubnets",
+          "ec2:DescribeNetworkInterfaces",
+          "ec2:DescribeAvailabilityZones",
+          "ec2:AuthorizeSecurityGroupEgress",
+          "ec2:AuthorizeSecurityGroupIngress",
+          "ec2:DeleteSecurityGroup",
+          "ec2:DeleteNetworkInterface",
+          "ec2:RevokeSecurityGroupEgress",
+          "ec2:RevokeSecurityGroupIngress"
+          ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ]
+}
+```
+
+If you want to grant read\-only permissions, use this policy\.
+
+```
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": [
+          "workdocs:Describe*",
+          "ds:DescribeDirectories",       
+          "ec2:DescribeVpcs",
+          "ec2:DescribeSubnets"
+          ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ]
+}
+```
+
+In the policy, the first action grants access to all the Amazon WorkDocs `Describe` operations\. The `DescribeDirectories ` action obtains information about your AWS Directory Service directories\. The Amazon EC2 operations enable Amazon WorkDocs to obtain a list of your VPCs and subnets\.
+
+## Using folder IDs in API calls<a name="use-folder-ids"></a>
+
+Whenever an API call accesses a folder, you must use the folder ID, not the folder name\. For example, if you pass `client.get_folder(FolderId='MyDocs')`, the API call returns an **UnauthorizedResourceAccessException** message and the following 404 message\.
+
+```
+client.get_folder(FolderId='MyDocs')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "C:\Users\user-name\AppData\Local\Programs\Python\Python36-32\lib\site-packages\botocore\client.py", line 253, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "C:\Users\user-name\AppData\Local\Programs\Python\Python36-32\lib\site-packages\botocore\client.py", line 557, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.UnauthorizedResourceAccessException: An error occurred (UnauthorizedResourceAccessException) when calling the GetFolder operation: 
+Principal [arn:aws:iam::395162986870:user/Aman] is not allowed to execute [workdocs:GetFolder] on the resource.
+```
+
+To avoid that, use the ID in the folder's URL\. 
+
+`site.workdocs/index.html#/folder/abc123def456ghi789jkl789mno4be7024df198736472dd50ca970eb22796082e3d489577`\.
+
+Passing that ID returns a correct result\.
+
+```
+client.get_folder(FolderId='abc123def456ghi789jkl789mno4be7024df198736472dd50ca970eb22796082e3d489577')
+{'ResponseMetadata': {'RequestId': 'f8341d4e-4047-11e7-9e70-afa8d465756c', 'HTTPStatusCode': 200, 'HTTPHeaders': {'x-amzn-requestid': 'f234564e-1234-56e7-89e7-a10fa45t789c', 'cache-control': 'private, no-cache, no-store, max-age=0', 'content-type': 'application/json', 'content-length': '733', 'date': 'Wed, 24 May 2017 06:12:30 GMT'}, 'RetryAttempts': 0}, 'Metadata': {'Id': 'abc123def456ghi789jkl789mno4be7024df198736472dd50ca970eb22796082e3d489577', 'Name': 'sentences', 'CreatorId': 'S-1-5-21-2125721135-1643952666-3011040551-2105&d-906724f1ce', 'ParentFolderId': '0a811a922403ae8e1d3c180f4975f38f94372c3d6a2656c50851c7fb76677363', 'CreatedTimestamp': datetime.datetime(2017, 5, 23, 12, 59, 13, 8000, tzinfo=tzlocal()), 'ModifiedTimestamp': datetime.datetime(2017, 5, 23, 13, 13, 9, 565000, tzinfo=tzlocal()), 'ResourceState': 'ACTIVE', 'Signature': 'b7f54963d60ae1d6b9ded476f5d20511'}}
+```
 
 ## Create an application<a name="wd-app-create-app"></a>
 
@@ -91,7 +177,10 @@ If you require FIPS 140\-2 validated cryptographic modules when accessing AWS th
 
 After obtaining the access token, your application can make API calls to Amazon WorkDocs services\.
 
-A sample curl GET request to obtain the metadata of a document:
+**Important**  
+
+
+This example shows how to use a curl GET request to obtain a document's metadata\.
 
 ```
 Curl "https://workdocs.us-east-1.amazonaws.com/api/v1/documents/{document-id}" -H "Accept: application/json" -H "Authentication: Bearer accesstoken"

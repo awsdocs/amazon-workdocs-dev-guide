@@ -1,6 +1,6 @@
-# Connect to Amazon WorkDocs by assuming a role and browse a user’s root folder<a name="connect-workdocs-role"></a>
+# Connecting to Amazon WorkDocs by assuming a role<a name="connect-workdocs-role"></a>
 
-This sample code, using the AWS Java SDK, illustrates the individual steps for assuming a role and using the role's temporary security credentials to access Amazon WorkDocs\. The code sample uses the `describeFolderContents` API to create a list of items present in a user's folder\.
+This example uses the AWS Java SDK to assume a role and and use the role's temporary security credentials to access Amazon WorkDocs\. The code sample uses the [DescribeFolderContents](https://docs.aws.amazon.com/workdocs/latest/APIReference/API_DescribeFolderContents.html) API to list the items in a user's folder\.
 
 ```
 import java.util.ArrayList;
@@ -40,16 +40,16 @@ public class AssumeRoleDemo {
             .withCredentials(new AWSStaticCredentialsProvider(longTermCredentials))
             .withRegion(Regions.DEFAULT_REGION.getName()).build();;
 
-    // If you are accessing a 3rd party account, then ExternalId should
-    // be set on assumeRequest using the withExternalId() function.
+    // If you are accessing a 3rd party account, set ExternalId 
+    // on assumeRequest using the withExternalId() function.
     AssumeRoleRequest assumeRequest =
         new AssumeRoleRequest().withRoleArn(DEMO_ROLE_ARN).withDurationSeconds(3600)
             .withRoleSessionName("demo");
 
     AssumeRoleResult assumeResult = stsClient.assumeRole(assumeRequest);
 
-    // AssumeRole returns temporary temporary security credentials obtained 
-	// for workdocs-readonly-role
+    // AssumeRole returns temporary security credentials for the 
+	// workdocs-readonly-role
 
     BasicSessionCredentials temporaryCredentials =
         new BasicSessionCredentials(assumeResult.getCredentials().getAccessKeyId(), assumeResult

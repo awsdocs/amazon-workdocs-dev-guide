@@ -1,11 +1,11 @@
-# Creating a new user<a name="creating-newuser"></a>
+# Creating a user<a name="creating-newuser"></a>
 
-The following code snippet demonstrates the request construction for creating a new user in Amazon WorkDocs\.
+The following code snippet demonstrates the request construction for creating a user in Amazon WorkDocs\.
 
 **Note**  
-This is not a valid operation for a Connected AD configuration\. To add a new user in the Connected AD configuration, the user must already be present in the enterprise directory\. Then, you must make a call to the ActivateUser API to activate the user in Amazon WorkDocs\.
+This is not a valid operation for a Connected AD configuration\. To create a user in the Connected AD configuration, the user must already be present in the enterprise directory\. Then, you must make a call to the ActivateUser API to activate the user in Amazon WorkDocs\.
 
-The following example demonstrates how to create a new user with a storage quota of 1 gigabytes\.
+The following example demonstrates how to create a user with a storage quota of 1 gigabytes\.
 
 ```
 CreateUserRequest request = new CreateUserRequest();
@@ -28,10 +28,10 @@ CreateUserRequest request = new CreateUserRequest();
     CreateUserResult result = workDocsClient.createUser(request);
 ```
 
-You can get a Amazon WorkDocs organization ID from the AWS console using the following steps:
+Follow these steps to obtain a Amazon WorkDocs organization ID from the AWS console:
 
 **To get an organization ID**
 
-1. In the [AWS Directory Service console](https://console.aws.amazon.com/directoryservicev2/) navigation pane, select **Directories**\.
+1. In the [AWS Directory Service console](https://console.aws.amazon.com/directoryservicev2/) navigation pane, choose **Directories**\.
 
-1. The **Directory ID** corresponding to your Amazon WorkDocs site is the Organization ID for that site\.
+1. Note the **Directory ID** value that corresponds to your Amazon WorkDocs site\. That is the Organization ID for the site\.

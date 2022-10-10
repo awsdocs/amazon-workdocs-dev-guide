@@ -1,8 +1,8 @@
-# Grant permission to a developer to assume an IAM role given by a Amazon WorkDocs customer<a name="wd-iam-grantdev"></a>
+# Granting users permission to assume an IAM role<a name="wd-iam-grantdev"></a>
 
-If you are a developer with an administrative AWS account, you can grant a user permission to switch to a role by creating a new policy and attaching it to the user\.
+A developer with an administrative AWS account can allow a user to assume an IAM role\. To do that, you create a new policy and attach it to that user\.
 
-A policy that grants a user permission to assume a role must include a statement with the `Allow` effect on the `sts:AssumeRole` action and the Amazon Resource Name \(ARN\) of the role in a `Resource` element, as shown in the following example\. Users that get the policy \(either through group membership or directly attached\) are allowed to switch to the specified role\.
+The policy must include a statement with the `Allow` effect on the `sts:AssumeRole` action, plus the Amazon Resource Name \(ARN\) of the role in a `Resource` element, as shown in the following example\. Users that get the policy, either through group membership or direct attachment, can switch to the specified role\.
 
 ```
 {
@@ -10,7 +10,7 @@ A policy that grants a user permission to assume a role must include a statement
   "Statement": {
     "Effect": "Allow",
     "Action": "sts:AssumeRole",
-    "Resource": "arn:aws:iam::<aws_account_id>:role/ workdocs_app_role"
+    "Resource": "arn:aws:iam::<aws_account_id>:role/workdocs_app_role"
   }
 }
 ```

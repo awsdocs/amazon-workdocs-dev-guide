@@ -1,22 +1,22 @@
 # Connect to Amazon WorkDocs with IAM user credentials and query for users<a name="connect-workdocs-iam"></a>
 
-The following code, using the AWS SDK, illustrates the steps in making API calls using an IAM user’s API credentials\. In this case the API user and the Amazon WorkDocs site belong to the same AWS account\.
+The following code shows how to use an IAM user’s API credentials to make API calls\. In this case the API user and the Amazon WorkDocs site belong to the same AWS account\.
 
 Ensure that the IAM user has been granted Amazon WorkDocs API access through an appropriate IAM policy\.
 
-The code sample uses describeUsers API to search for users and obtain metadata for users\. User metadata provides details such as first name, last name, User ID and Root Folder ID\. Root Folder ID is particularly helpful if you want to perform any content upload or download operations on behalf of the user\.
+The code sample uses the [DescribeUsers](https://docs.aws.amazon.com/workdocs/latest/APIReference/API_DescribeUsers.html) API to search for users, and obtain metadata for users\. User metadata provides details such as first name, last name, User ID and Root Folder ID\. Root Folder ID is particularly helpful if you want to perform any content upload or download operations on behalf of the user\.
 
 The code requires that you obtain an Amazon WorkDocs Organization ID\.
 
-You can get a Amazon WorkDocs organization ID from the AWS console using the following steps:
+Follow these steps to obtain a Amazon WorkDocs organization ID from the AWS console:
 
 **To get an organization ID**
 
-1. In the [AWS Directory Service console](https://console.aws.amazon.com/directoryservicev2/) navigation pane, select **Directories**\.
+1. In the [AWS Directory Service console](https://console.aws.amazon.com/directoryservicev2/) navigation pane, choose **Directories**\.
 
-1. The **Directory ID** corresponding to your Amazon WorkDocs site is the Organization ID for that site\.
+1. Note the **Directory ID** value that corresponds to your Amazon WorkDocs site\. That is the Organization ID for the site\.
 
-The following is the code example:
+The example shows how to use IAM credentials to make API calls\.
 
 ```
 import java.util.ArrayList;

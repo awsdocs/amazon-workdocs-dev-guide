@@ -6,7 +6,7 @@ Use the following procedure to upload a document to Amazon WorkDocs\.
 
 1. Create an instance of `AmazonWorkDocsClient` as follows:
 
-   If you are using IAM user credentials, refer to [Connect to Amazon WorkDocs with IAM user credentials and query for users](connect-workdocs-iam.md)\. If you are assuming an IAM role, refer to [Connect to Amazon WorkDocs by assuming a role and browse a user’s root folder](connect-workdocs-role.md) for more details\.
+   If you are using IAM user credentials, refer to [Connect to Amazon WorkDocs with IAM user credentials and query for users](connect-workdocs-iam.md)\. If you are assuming an IAM role, refer to [Connecting to Amazon WorkDocs by assuming a role](connect-workdocs-role.md) for more details\.
 
    ```
    AWSCredentials longTermCredentials =

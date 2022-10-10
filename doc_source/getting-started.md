@@ -4,9 +4,9 @@ The following code snippets can help you get started using the Amazon WorkDocs S
 
 **Topics**
 + [Connect to Amazon WorkDocs with IAM user credentials and query for users](connect-workdocs-iam.md)
-+ [Connect to Amazon WorkDocs by assuming a role and browse a user’s root folder](connect-workdocs-role.md)
++ [Connecting to Amazon WorkDocs by assuming a role](connect-workdocs-role.md)
 + [Upload a document](upload-documents.md)
 + [Download a document](download-documents.md)
-+ [Subscribe to notifications](subscribe-notifications.md)
-+ [Creating a new user](creating-newuser.md)
-+ [Adding permissions to user on a resource](adding-permissions.md)
++ [Setting up notifications for an IAM user or role](manage-notifications.md)
++ [Creating a user](creating-newuser.md)
++ [Granting users permissions to a resource](adding-permissions.md)

@@ -1,6 +1,6 @@
 # Constructing Amazon WorkDocs Content Manager<a name="content_manager_constructing"></a>
 
-Amazon WorkDocs Content Manager can be used for both administrative and user applications\.
+You can use Amazon WorkDocs Content Manager for administrative and user applications\.
 
 For user applications, a developer must construct Amazon WorkDocs Content Manager with anonymous AWS credentials and an authentication token\.
 

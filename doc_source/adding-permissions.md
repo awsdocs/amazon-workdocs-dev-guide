@@ -1,4 +1,4 @@
-# Adding permissions to user on a resource<a name="adding-permissions"></a>
+# Granting users permissions to a resource<a name="adding-permissions"></a>
 
 The following code snippet illustrates the request construction for adding permissions for a user on a resource\. In this example we are adding `CONTRIBUTOR` permissions to a `USER` on a resource\. This API can also be used to give permissions to a User or Group for a Folder or Document\.
 

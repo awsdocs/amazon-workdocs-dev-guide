@@ -5,8 +5,7 @@ Amazon WorkDocs administrative APIs are authenticated and authorized through IAM
 The following are provided as examples:
 
 **Topics**
-+ [Grant permission to the Amazon WorkDocs API for a developer on the AWS account](wd-iam-sameacct.md)
-+ [Grant permission to Amazon WorkDocs API for third\-party developer AWS account](wd-iam-crossacct.md)
-+ [Grant permission to a developer to assume an IAM role given by a Amazon WorkDocs customer](wd-iam-grantdev.md)
++ [Granting developers permissions to the Amazon WorkDocs API](wd-iam-sameacct.md)
++ [Granting third\-party developers permission to the Amazon WorkDocs APIs](wd-iam-crossacct.md)
++ [Granting users permission to assume an IAM role](wd-iam-grantdev.md)
 + [Restricting access to a specific Amazon WorkDocs instance](restrict_access.md)
-+ [Managing notifications for an IAM user or a role](manage-notifications.md)
